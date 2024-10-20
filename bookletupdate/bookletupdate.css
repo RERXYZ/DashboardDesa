@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Poppins:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Poppins", sans-serif;
+  transition: 0.1s all linear;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+:root {
+  --color1: #d2e4e3d2;
+  --color2: #aac3c4;
+  --color3: #e6f0f0;
+  --color4: #dae9ea72;
+  --color5: #0b818e;
+  --color6: #51a8b2;
+  --color7: #83aaab;
+  --background1: #877cfd;
+  --background2: #b5f653;
+  --text-color: #515656;
+  --text-color2: white;
+  --text-color3: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.background {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background .circle1 {
+  position: absolute;
+  top: 12rem;
+  right: -10rem;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  background: var(--background1);
+  box-shadow: -50px 0 200px var(--background1);
+}
+
+.background .circle2 {
+  position: absolute;
+  top: 5rem;
+  left: 10rem;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  background: var(--background2);
+  box-shadow: 50px 50px 15rem var(--background2);
+}
+
+.booklet {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booklet .editbooklet {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: var(--color1);
+    backdrop-filter: blur(20px);
+    overflow-y: scroll;
+}
+
+.booklet .editbooklet::-webkit-scrollbar {
+  display: none;
+}
+
+.booklet .editbooklet:hover::-webkit-scrollbar {
+  display: block;
+  width: 5px;
+  border-radius: 5px;
+}
+
+.booklet .editbooklet form {
+    width: 33rem;
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    background: var(--color3);
+    animation: editbookletform .2s linear forwards;
+}
+
+@keyframes editbookletform {
+    0% {
+      opacity: 0;
+      transform: translateY(5rem) scale(.7);
+    }
+  }
+  
+.booklet .editbooklet form ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
+.booklet .editbooklet form ul li {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+.booklet .editbooklet form ul li label {
+    margin-bottom: .5rem;
+    margin-left: .3rem;
+}
+  
+.booklet .editbooklet form ul li:nth-child(1) label .gambarbooklet-view {
+    margin-top: 1rem;
+    width: 14rem;
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    padding: 1rem;
+    cursor: pointer;
+    background: no-repeat center;
+    background-size: cover;
+    border: 3px dashed var(--color6);
+    overflow: hidden;
+}
+  
+.booklet .editbooklet form ul li:nth-child(1) label .gambarbooklet-view i {
+    font-size: 80px;
+    color: var(--color6);
+    line-height: 0;
+}
+  
+.booklet .editbooklet form ul li:nth-child(1) label .gambarbooklet-view p {
+    font-size: 15px;
+    font-weight: 500;
+}
+  
+.booklet .editbooklet form ul li:nth-child(1) label .gambarbooklet-view span {
+    margin-top: .5rem;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+  
+.booklet .editbooklet form ul li:nth-child(2){
+    margin-top: 1rem;
+  }
+  
+.booklet .editbooklet form ul li:nth-child(2) label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+  
+.booklet .editbooklet form ul li:nth-child(2) label .filebooklet-view{
+    border: 3px dashed var(--color6);
+    padding: .5rem .7rem;
+    border-radius: 10px;
+}
+  
+.booklet .editbooklet form ul li:nth-child(2) label .filebooklet-view p{
+    font-size: 13px;
+    font-weight: 500;
+}
+  
+.booklet .editbooklet form ul li:nth-child(3) {
+    margin: 1.5rem 0 0;
+    font-size: .9rem;
+    font-weight: 500;
+}
+  
+.booklet .editbooklet form ul li:nth-child(3) label {
+    width: 100%;
+    margin-bottom: .5rem;
+    margin-left: .4rem;
+}
+  
+.booklet .editbooklet form ul li:nth-child(3) label span {
+    color: var(--color5);
+}
+  
+.booklet .editbooklet form ul li:nth-child(3) input {
+    width: 100%;
+    position: relative;
+    display: flex;
+    font-size: 14.5px;
+    padding: .5rem 1rem;
+    border-radius: 40px;
+    outline: 1.5px solid var(--color6);
+    background: transparent;
+}
+  
+.booklet .editbooklet form ul li:nth-child(3) input:hover,
+.booklet .editbooklet form ul li:nth-child(3) input:focus {
+    outline: transparent;
+    background: var(--text-color2);
+    box-shadow: 0 2px 5px #cdd4d4;
+}
+  
+.booklet .editbooklet form ul button {
+    width: 100%;
+    font-size: 15px;
+    margin-top: 1.5rem;
+    padding: .6rem;
+    border-radius: 20px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(-40deg, var(--color5), var(--color6) 70%);
+    background-size: 200% 200%;
+}
+  
+.booklet .editbooklet form ul button:hover {
+    animation: gradient 4s linear infinite alternate;
+}
+  
+@keyframes gradient {
+    0%{
+        background-position: 70% 300%;
+    }
+    
+    50%{
+        background-position: 0% 0%;
+    }
+    
+    100%{
+        background-position: 100% 100%;
+    }
+}
+  
+@media (max-width: 570px) {
+    .booklet .editbooklet form {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .booklet .editbooklet form ul li:nth-child(1) label .gambarbooklet-view {
+        margin-top: 0;
+        width: 100%;
+        height: 24rem;
+    }
+  
+    .booklet .editbooklet form ul li input {
+        font-size: 13px;
+    }
+}

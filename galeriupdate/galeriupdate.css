@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Poppins:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Poppins", sans-serif;
+  transition: 0.1s all linear;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+:root {
+  --color1: #d2e4e3d2;
+  --color2: #aac3c4;
+  --color3: #e6f0f0;
+  --color4: #dae9ea72;
+  --color5: #0b818e;
+  --color6: #51a8b2;
+  --color7: #83aaab;
+  --background1: #877cfd;
+  --background2: #b5f653;
+  --text-color: #515656;
+  --text-color2: white;
+  --text-color3: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.background {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background .circle1 {
+  position: absolute;
+  top: 12rem;
+  right: -10rem;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  background: var(--background1);
+  box-shadow: -50px 0 200px var(--background1);
+}
+
+.background .circle2 {
+  position: absolute;
+  top: 5rem;
+  left: 10rem;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  background: var(--background2);
+  box-shadow: 50px 50px 15rem var(--background2);
+}
+
+.gallery {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gallery .editgaleri {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: var(--color1);
+  backdrop-filter: blur(20px);
+}
+
+.gallery .editgaleri .editcontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  background: var(--color3);
+  box-shadow: 0 0 30px var(--color2);
+}
+
+.gallery .editgaleri .editcontent label {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery .editgaleri .editcontent label .gambargaleri-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 30rem;
+  height: 20rem;
+  background: no-repeat center;
+  background-size: cover;
+  border-radius: 10px;
+  border: 3px dashed var(--color6);
+  padding: 2rem 4rem 1rem;
+}
+
+.gallery .editgaleri .editcontent label .gambargaleri-view:hover {
+  cursor: pointer;
+}
+
+.gallery .editgaleri .editcontent label .gambargaleri-view i {
+  font-size: 90px;
+  line-height: 0;
+  color: var(--color6);
+}
+
+.gallery .editgaleri .editcontent label .gambargaleri-view p {
+  margin-top: .5rem;
+  font-family: 'quicksand';
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.gallery .editgaleri .editcontent label .gambargaleri-view span {
+  margin-top: 1rem;
+  color: var(--text-color);
+  font-family: 'quicksand';
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.gallery .editgaleri .editcontent .keterangangaleriedit {
+  margin-top: 1.5rem;
+  width: 100%;
+  font-size: 15px;
+  padding: .7rem .7rem;
+  border-radius: 10px;
+  background: var(--color3);
+  outline: 1.5px solid var(--color6);
+}
+
+.gallery .editgaleri .editcontent .keterangangaleriedit:hover,
+.gallery .editgaleri .editcontent .keterangangaleriedit:focus {
+  box-shadow: 0 2px 5px #cdd4d4;
+  outline: transparent;
+  background: var(--text-color2);
+}
+
+.gallery .editgaleri .editcontent button {
+  width: 100%;
+  font-size: 15px;
+  margin-top: 2rem;
+  padding: .6rem 0;
+  font-weight: 500;
+  color: var(--text-color2);
+  text-shadow: 0 0 5px var(--color5);
+  border-radius: 30px;
+  background: linear-gradient(-40deg, var(--color5), var(--color6) 70%);
+  background-size: 200%;
+  background-position: 70% 30%;
+}
+
+.gallery .editgaleri .editcontent button:hover {
+  cursor: pointer;
+  background-position: 20% 50%;
+  transition: .5s;
+}
+
+@media (max-width: 950px) {
+  .gallery .editgaleri .editcontent label .gambargaleri-view {
+    width: 25rem;
+    height: 15rem;
+  }
+
+  .gallery .editgaleri .editcontent .keterangangaleriedit {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 630px) {
+  .gallery .editgaleri .editcontent label .gambargaleri-view {
+    width: 20rem;
+    height: 13rem;
+    padding: 2rem 2rem 1rem;
+  }
+
+  .gallery .editgaleri .editcontent label .gambargaleri-view i {
+    font-size: 70px;
+  }
+  
+  .gallery .editgaleri .editcontent label .gambargaleri-view p {
+    font-size: 14px;
+  }
+  
+  .gallery .editgaleri .editcontent label .gambargaleri-view span {
+    font-size: 10px;
+  }
+
+  .gallery .editgaleri .editcontent .keterangangaleriedit {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 395px) {
+  .gallery .editgaleri .editcontent {
+    width: 100%;
+    border-radius: 0;
+    background: transparent;
+    backdrop-filter: blur(0);
+    box-shadow: none;
+  }
+  
+  .gallery .editgaleri .editcontent label .gambargaleri-view {
+    width: 100%;
+    height: 12rem;
+  }
+
+  .gallery .editgaleri .editcontent label .gambargaleri-view p {
+    font-size: 13px;
+  }
+
+  .gallery .editgaleri .editcontent .keterangangaleriedit {
+    font-size: 13px;
+    border-radius: 30px;
+    background: transparent;
+    outline: 1.5px solid var(--color6);
+  }
+
+  .gallery .editgaleri .editcontent .keterangangaleriedit:focus {
+    background: var(--color4);
+    backdrop-filter: blur(5px);
+    outline: 2px solid var(--color6);
+  }
+}

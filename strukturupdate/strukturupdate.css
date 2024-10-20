@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Poppins:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Poppins", sans-serif;
+  transition: 0.1s all linear;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+:root {
+  --color1: #d2e4e3d2;
+  --color2: #aac3c4;
+  --color3: #e6f0f0;
+  --color4: #dae9ea72;
+  --color5: #0b818e;
+  --color6: #51a8b2;
+  --color7: #83aaab;
+  --background1: #877cfd;
+  --background2: #b5f653;
+  --text-color: #515656;
+  --text-color2: white;
+  --text-color3: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.background {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background .circle1 {
+  position: absolute;
+  top: 12rem;
+  right: -10rem;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  background: var(--background1);
+  box-shadow: -50px 0 200px var(--background1);
+}
+
+.background .circle2 {
+  position: absolute;
+  top: 5rem;
+  left: 10rem;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  background: var(--background2);
+  box-shadow: 50px 50px 15rem var(--background2);
+}
+
+.struktur {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.struktur .editstruktur {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: var(--color1);
+  backdrop-filter: blur(20px);
+}
+
+.struktur .editstruktur .editcontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 3rem;
+  width: 28rem;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  background: var(--color3);
+  box-shadow: 0 0 30px var(--color2);
+  overflow: hidden;
+}
+
+.struktur .editstruktur .editcontent ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.struktur .editstruktur .editcontent ul li {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0 0;
+}
+
+.struktur .editstruktur .editcontent ul li:nth-child(1) {
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.struktur .editstruktur .editcontent ul li label {
+  font-size: .9rem;
+  font-weight: 500;
+  margin: 0 0 .5rem;
+}
+
+.struktur .editstruktur .editcontent ul li label .span {
+  color: var(--color5);
+}
+
+.struktur .editstruktur .editcontent ul li:nth-child(1) label {
+  position: relative;
+  width: 7.5rem;
+  height: 7.5rem;
+  margin: 0;
+  border: 5px solid var(--text-color2);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 30px var(--color1);
+}
+
+.struktur .editstruktur .editcontent ul li:nth-child(1) label .gambarstruktur-view {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--color2);
+  background: url('img/<?= $galeri["gambar"];?>') no-repeat center;
+  background-size: cover;
+  background-position: 0 0;
+  z-index: 1;
+}
+
+.struktur .editstruktur .editcontent ul li:nth-child(1) label .gambarstruktur-view span {
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color6);
+  background: var(--color1);
+  padding: .2rem;
+  border-radius: 50%;
+  font-size: 20px;
+  border: 2px solid var(--text-color2);
+}
+
+.struktur .editstruktur .editcontent ul li:nth-child(2) input,
+.struktur .editstruktur .editcontent ul li:nth-child(3) input {
+  position: relative;
+  display: flex;
+  font-size: 15px;
+  padding: .5rem 1rem;
+  border-radius: 40px;
+  border: 2px solid var(--color2);
+  background: transparent;
+}
+
+.struktur .editstruktur .editcontent ul li input:hover,
+.struktur .editstruktur .editcontent ul li input:focus {
+  border: 2px solid var(--color6);
+}
+
+.struktur .editstruktur .editcontent ul li textarea {
+  width: 100%;
+  height: 10rem;
+  resize: none;
+  padding: .5rem;
+  font-size: 15px;
+  border-radius: 5px;
+  background: transparent;
+  border: 2px solid var(--color2);
+}
+
+.struktur .editstruktur .editcontent ul li textarea:hover,
+.struktur .editstruktur .editcontent ul li textarea:focus {
+  border: 2px solid var(--color6);
+}
+
+.struktur .editstruktur .editcontent ul li textarea::-webkit-scrollbar {
+  display: none;
+  width: 5px;
+  border-radius: 5px;
+}
+
+.struktur .editstruktur .editcontent ul li textarea:hover::-webkit-scrollbar {
+  display: block;
+}
+
+.struktur .editstruktur .editcontent ul li textarea::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border-radius: 2px;
+  background: var(--color2);
+}
+
+.struktur .editstruktur .editcontent button {
+  width: 100%;
+  font-size: 15px;
+  margin-top: 1.5rem;
+  padding: .6rem;
+  border-radius: 20px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(-40deg, var(--color5), var(--color6) 70%);
+  background-size: 200% 200%;
+}
+
+.struktur .editstruktur .editcontent button:hover {
+  animation: gradient 1s linear infinite alternate;
+}
+
+@keyframes gradient {
+  0%{
+      background-position: 70% 300%;
+  }
+  
+  50%{
+      background-position: 0% 0%;
+  }
+  
+  100%{
+      background-position: 100% 100%;
+  }
+}

@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Poppins:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Poppins", sans-serif;
+  transition: 0.1s all linear;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+:root {
+  --color1: #d2e4e3d2;
+  --color2: #aac3c4;
+  --color3: #e6f0f0;
+  --color4: #dae9ea72;
+  --color5: #0b818e;
+  --color6: #51a8b2;
+  --color7: #83aaab;
+  --background1: #877cfd;
+  --background2: #b5f653;
+  --text-color: #515656;
+  --text-color2: white;
+  --text-color3: black;
+}
+
+.background {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background .circle1 {
+  position: absolute;
+  top: 12rem;
+  right: -10rem;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  background: var(--background1);
+  box-shadow: -50px 0 200px var(--background1);
+}
+
+.background .circle2 {
+  position: absolute;
+  top: 5rem;
+  left: 10rem;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  background: var(--background2);
+  box-shadow: 50px 50px 15rem var(--background2);
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    background: var(--color1);
+    backdrop-filter: blur(20px);
+}
+
+.container .wrapper{
+    display: flex;
+    padding: 2rem 3rem;
+    width: 25rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background: var(--color3);
+    box-shadow: 0 0 30px var(--color2);
+    overflow: hidden;
+}
+
+.container .wrapper .logo img{
+    width: 4rem;
+}
+
+.container .wrapper .title{
+    margin: 1rem 0;
+}
+
+.container .wrapper .title h5{
+    font-size: 1.7rem;
+}
+
+.container .wrapper .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.container .wrapper .content .judul{
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.container .wrapper .content .judul span{
+    color: var(--color5);
+}
+
+.container .wrapper .content .isi{
+    width: 100%;
+    outline: 2px solid var(--color6);
+    font-size: 15px;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: .6rem 1rem;
+    border-radius: 20px;
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+    background: transparent;
+}
+
+.container .wrapper .content .isi:focus{
+    outline: 2px solid var(--color5);
+}
+
+.container .wrapper .content .rememberpassword{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 .3rem;
+}
+
+.container .wrapper .content .rememberpassword .remember{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.container .wrapper .content .rememberpassword .remember input{
+    width: 15px;
+    height: 15px;
+}
+
+.container .wrapper .content .rememberpassword .remember label{
+    margin-left: .5rem;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.container .wrapper .content .rememberpassword .forgotpass a{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.container .wrapper .button button{
+    width: 100%;
+    margin-top: 2rem;
+    padding: .8rem 0;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(200deg, var(--color5), var(--color6));
+    background-size: 200% 200%;
+    animation: gradient 3s linear infinite alternate;
+}
+
+@keyframes gradient {
+    0%{
+        background-position: 0% 0%;
+    }
+    
+    50%{
+        background-position: 0% 50%;
+    }
+    
+    100%{
+        background-position: 100% 100%;
+    }
+}
+
+.toast {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid red;
+    background: var(--text-color2);
+    padding: 1.5rem;
+    box-shadow: 0 5px 10px var(--color2);
+    overflow: hidden;
+    transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+    animation: toast .2s linear forwards;
+}
+
+@keyframes toast {
+    0% {
+        transform: translateX(calc(100% + 30px));
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.toast .toast-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toast .toast-content i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    font-size: 17px;
+    color: var(--text-color2);
+    background: red;
+}
+
+.toast .toast-content .message {
+    display: flex;
+    flex-direction: column;
+    margin-left: .5rem;
+}
+
+.toast .toast-content .message p {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.toast .toast-content .message p:nth-child(1) {
+    color: red;
+    font-weight: 600;
+}
+
+.toast .close {
+    position: absolute;
+    font-size: 18px;
+    top: .5rem;
+    right: .5rem;
+    opacity: .7;
+    cursor: pointer;
+}
+
+.toast .close:hover {
+    opacity: 1;
+    font-weight: 700;
+}
+
+.toast .progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #ddd;
+}
+
+.toast .progress::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: red;
+    animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+@media (max-width: 500px){
+    .container .wrapper{
+        box-shadow: none;
+        width: 100%;
+        height: 100vh;
+        background: var(--color1);
+    }
+}
+
+@media (max-width: 370px){
+    
+    .container .wrapper .logo img{
+        width: 4rem;
+    }
+    
+    .container .wrapper .title h5{
+        font-size: 1.5rem;
+    }
+    
+    .container .wrapper .content .judul{
+        font-size: .7rem;
+        font-weight: 600;
+    }
+
+    .container .wrapper .content .rememberpassword .remember input{
+        width: 14px;
+        height: 14px;
+    }
+    
+    .container .wrapper .content .rememberpassword .remember label{
+        font-size: 12px;
+    }
+    
+    .container .wrapper .content .rememberpassword .forgotpass a{
+        font-size: 11px;
+    }
+}

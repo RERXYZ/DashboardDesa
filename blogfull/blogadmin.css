@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Poppins:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s all linear;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+:root {
+  --color1: #117c6f;
+  --color2: #289c8e;
+  --color3: #8de5db;
+  --color4: #b2f0e8;
+  --color5: #2fc4b2;
+  --text-color: #546680;
+  --text-color2: white;
+  --text-color3: black;
+  --background: #f4f4f4;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* blog section */
+.blog {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 20%;
+}
+
+.blog .image {
+  width: 100%;
+  height: 35rem;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.blog .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog .tanggal {
+  margin-top: 1.5rem;
+  font-weight: 500;
+  font-size: 13.5px;
+  color: var(--text-color);
+}
+
+.blog .judul {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.blog .isi {
+  margin-top: 2rem;
+  font-size: 16px;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+@media (max-width: 1420px) {
+  .blog .image {
+    height: 35rem;
+  }
+}
+
+@media (max-width: 1230px) {
+  .blog {
+    padding: 5rem 10%;
+  }
+}
+
+@media (max-width: 920px) {
+  .blog .image {
+    height: 30rem;
+  }
+}
+
+@media (max-width: 775px) {
+  .blog .image {
+    height: 25rem;
+  }
+
+  .blog .judul {
+    font-size: 1.6rem;
+  }
+  
+  .blog .isi {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 700px) {
+  .blog {
+    padding: 5rem 5%;
+  }
+
+  .blog .image {
+    height: 25rem;
+  }
+  
+  .blog .tanggal {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 580px) {
+  .back {
+    font-size: 12px;
+  }
+
+  .blog {
+    padding: 2rem 4%;
+  }
+
+  .blog .image {
+    height: 20rem;
+  }
+
+  .blog .judul {
+    font-size: 1.3rem;
+  }
+
+  .blog .isi {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog .image {
+    height: 17rem;
+    border-radius: 20px;
+  }
+  
+  .blog .tanggal {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 460px) {
+  .blog .judul {
+    font-size: 1.1rem;
+  }
+
+  .blog .isi {
+    margin-top: 1rem;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 410px) {
+  .blog .image {
+    height: 13rem;
+  }
+
+  .blog .judul {
+    font-size: 1rem;
+  }
+}
